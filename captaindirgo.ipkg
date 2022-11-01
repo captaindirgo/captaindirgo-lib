@@ -1,0 +1,10 @@
+package captaindirgo
+version = 0.0.1
+
+sourcedir = "src/idris"
+builddir = "build"
+outputdir = "."
+executable = "index.js"
+main = Main
+opts = "--codegen javascript"
+depends = contrib

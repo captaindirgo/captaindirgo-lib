@@ -1,0 +1,21 @@
+{
+  "name": "captaindirgo-lib",
+  "version": "0.0.1",
+  "description": "Captain dirgo networking library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@hyperswarm/dht": "file:../hyperswarm_dht",
+    "bittorrent-tracker": "^9.19.0",
+    "create-torrent": "^5.0.6",
+    "parse-torrent": "^9.1.5"
+  }
+}
