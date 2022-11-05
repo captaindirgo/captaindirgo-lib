@@ -1,0 +1,15 @@
+package captaindirgo
+version = 0.0.1
+
+sourcedir = "src/idris"
+builddir = "build"
+outputdir = "."
+executable = "index.js"
+main = CD.Main
+modules = CD.Util,CD.BaseTypes
+opts = "--codegen javascript"
+depends = contrib --within Idris2
+          ,test --within Idris2
+	  ,elab-util --needed for automatically marshaling records
+	  ,sop -- used by JS stuff
+	  

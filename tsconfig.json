@@ -1,6 +1,6 @@
 {
-      "esModuleInterop" : true,
     "compilerOptions" : {
+      //this is here to eliminate the warning TS151001
       "esModuleInterop" : true
     }
 }
