@@ -14,17 +14,6 @@ interface FromJS t t2 where
   fromJS : t -> CoreIO t2
   
   
-%foreign "javascript:lambda: (s) => {return typeof s === 'string'}"
-export
-prim__isString : (name : String) -> PrimIO Bool
-
-fromJsToPrim : ((v : t) -> PrimIO Bool) -> AnyPtr -> CoreIO t
-fromJsToPrim f v =
-  do
-    True <- liftIO $ primIO $ f v
-      | False => throwE (Error_ "wrong type") --TODO 3 better error message
-    pure (believe_me v)
-
 public export 
 FromJS String String where
   fromJS = pure {f=CoreIO} --fromJsToPrim prim__isString
